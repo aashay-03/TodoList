@@ -96,7 +96,7 @@ passport.deserializeUser(function(user, done) {
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/today"
+    callbackURL: "https://sleepy-anchorage-54722.herokuapp.com/auth/google/today"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({  username: profile.emails[0].value, googleId: profile.id }, function (err, user) {
