@@ -126,7 +126,7 @@ passport.use(new FacebookStrategy({
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/github/today"
+    callbackURL: "https://sleepy-anchorage-54722.herokuapp.com/auth/github/today"
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({ username: profile.username, githubId: profile.id }, function (err, user) {
