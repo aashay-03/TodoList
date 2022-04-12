@@ -1,0 +1,57 @@
+<%- include("partials/header") -%>
+<style>
+  html,body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+  }
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="title-text">
+      <div class="title signup">SignUp</div>
+    </div>
+    <%- include('partials/messages') %>
+    <div class="form-container">
+      <div class="form-inner">
+        <form class="signup" action="/register" method="POST">
+          <div class="field">
+            <input type="email" placeholder="Email Address" name="username" value="<%= typeof email != 'undefined' ? email : '' %>" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" name="password" required>
+          </div>
+          <!-- <div class="pass-link"><a href="#">Forgot password?</a></div> -->
+          <button class="btn" type="submit" name="button">SignUp</button>
+        </form>
+      </div>
+      <div class="box-divider">
+        <div class="divider">
+          <div class="hrl"></div>
+        </div>
+        <div class="or">OR</div>
+        <div class="divider">
+          <div class="hrl"></div>
+        </div>
+      </div>
+      <a class="btn-social btn-google" href="/auth/google" role="button">
+        <span class="fab fa-google"></span>
+        &nbsp;Sign up with Google
+      </a>
+      <a class="btn-social btn-facebook" href="/auth/facebook" role="button">
+        <span class="fab fa-facebook"></span>
+        &nbsp;Sign up with Facebook
+      </a>
+      <a class="btn-social btn-github" href="/auth/github" role="button">
+        <span class="fab fa-github"></span>
+        &nbsp;Sign up with GitHub
+      </a>
+      <hr>
+      <div class="signup-link">Have an account? <a href="/login">Log in</a></div>
+    </div>
+  </div>
+
+<%- include("partials/footer") -%>

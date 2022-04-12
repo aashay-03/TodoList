@@ -1,15 +1,23 @@
-<%- include("header") -%>
+<%- include("partials/header") -%>
+</head>
+
+<body>
 <header>
   <div class="tophead">
     <div>
       <span class="menulines" onclick="openNav()">&#9776;</span>
     </div>
     <div class="listCreation">
-      <form class="navform" action="/create" method="post">
-        <input class="listNameInput" type="text" name="newListName" placeholder="New List" autocomplete="off">
-        <button id="menuBtn" class="listNameCreator" type="submit" name="button" onclick="colorChange()">Create</button>
-        <input type="hidden" name="listName" value="<%= listTitle %>">
-      </form>
+      <div class="create-list-form">
+        <form class="navform" action="/create" method="post">
+          <input class="listNameInput" type="text" name="newListName" placeholder="New List" autocomplete="off">
+          <button id="menuBtn" class="listNameCreator" type="submit" name="button" onclick="colorChange()">Create</button>
+          <input type="hidden" name="listName" value="<%= listTitle %>">
+        </form>
+      </div>
+    </div>
+    <div class="log-out">
+      <a class="log-out-btn" href="/logout" role="button">Log Out</a>
     </div>
   </div>
 </header>
@@ -37,7 +45,6 @@
     </div>
     <input type="hidden" name="listName" value="<%= listTitle %>">
   </form>
-
   <% }); %>
 
   <form class="item" action="/" method="post">
@@ -67,4 +74,4 @@
     document.getElementById("menuBtn").style.background = "white";
   }
 </script>
-<%- include("footer") -%>
+<%- include("partials/footer") -%>

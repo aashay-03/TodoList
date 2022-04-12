@@ -1,0 +1,57 @@
+<%- include("partials/header") -%>
+<style>
+  html,body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+  }
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login</div>
+    </div>
+    <%- include('partials/messages') %>
+    <div class="form-container">
+      <div class="form-inner">
+        <form class="login" action="/login" method="POST">
+          <div class="field">
+            <input type="email" placeholder="Email Address" name="username" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" name="password" required>
+          </div>
+          <!-- <div class="pass-link"><a href="#">Forgot password?</a></div> -->
+          <button class="btn" type="submit" name="button">Login</button>
+        </form>
+      </div>
+      <div class="box-divider">
+        <div class="divider">
+          <div class="hrl"></div>
+        </div>
+        <div class="or">OR</div>
+        <div class="divider">
+          <div class="hrl"></div>
+        </div>
+      </div>
+      <a class="btn-social btn-google" href="/auth/google" role="button">
+        <span class="fab fa-google"></span>
+        &nbsp;Log in with Google
+      </a>
+      <a class="btn-social btn-facebook" href="/auth/facebook" role="button">
+        <span class="fab fa-facebook"></span>
+        &nbsp;Log in with Facebook
+      </a>
+      <a class="btn-social btn-github" href="/auth/github" role="button">
+        <span class="fab fa-github"></span>
+        &nbsp;Log in with GitHub
+      </a>
+      <hr>
+      <div class="signup-link">Don't have an account? <a href="/register">Sign up</a></div>
+    </div>
+  </div>
+
+<%- include("partials/footer") -%>

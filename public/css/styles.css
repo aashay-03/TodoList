@@ -120,10 +120,15 @@ footer {
   color: #fff;
 }
 
-.listCreation {
-  margin-right: 50px;
+.create-list-form {
+  display: inline-block;
+  padding-left: 66px;
 }
 
+.log-out {
+  display: inline-block;
+  margin-right: 35px;
+}
 
 .sidenav {
   height: 100%;
@@ -202,6 +207,22 @@ footer {
   border: 2px solid black;
 }
 
+.log-out-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 102%;
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid black;
+  color: #f2f2f2;
+  background: #191919;
+  text-decoration: none;
+}
+
+.log-out-btn:hover {
+  background: black;
+  color: #fff;
+}
+
 .delete-form {
   display: flex;
   justify-content: center;
@@ -221,7 +242,254 @@ footer {
     margin-left: 10px;
   }
 
-  .listCreation {
+  .log-out {
     margin-right: 15px;
   }
+
+  .create-list-form {
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 540px) {
+  .create-list-form {
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 470px) {
+  .create-list-form {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .create-list-form {
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 440px) {
+  .menulines {
+    margin-left: 5px;
+  }
+
+  .log-out {
+    margin-right: 10px;
+  }
+
+  .create-list-form {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 435px) {
+  .menulines {
+    margin-left: 2px;
+  }
+
+  .log-out {
+    margin-right: 3px;
+  }
+}
+
+/* ################ Login-SignUp Page ##################### */
+
+.wrapper{
+  overflow: hidden;
+  width: 400px;
+  background: #fff;
+  padding: 30px 40px 25px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ################ Form Heading ##################### */
+
+.wrapper .title-text{
+  display: flex;
+  width: 200%;
+}
+
+.wrapper .title{
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* ################ Form ##################### */
+
+.wrapper .form-container{
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-container .form-inner{
+  display: flex;
+  width: 200%;
+}
+
+.form-container .form-inner form{
+  width: 50%;
+}
+
+.form-inner form .field{
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-inner form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+.form-inner form .field input::placeholder{
+  color: #999;
+  transition: all 0.3s ease;
+}
+
+.form-inner form .pass-link{
+  margin-top: 5px;
+}
+
+/* ################ Login Button ##################### */
+
+.btn {
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 30px 0;
+  color: #fff;
+  background: #0095f6;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #0080ff;
+}
+
+/* ################ Divider ##################### */
+
+.divider {
+  display: flex;
+  width: 135px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.or {
+  display: inline-block;
+  margin: 0 12px;
+  color: grey;
+}
+
+.box-divider {
+  display: flex;
+  justify-content: center;
+}
+
+.hrl {
+  display: inline-block;
+  width: 135px;
+  border-top: 1px solid grey;
+}
+
+/* ################ Social Buttons ##################### */
+
+.btn-social {
+  color: white;
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  margin: 7px 0;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.btn-google {
+  background-color: #dd4b39;
+  margin-top: 30px;
+}
+
+.btn-google:hover {
+  background-color: #c23321;
+}
+
+.btn-facebook {
+  background-color: #3B5998;
+}
+
+.btn-facebook:hover {
+  background-color: #2d4373;
+}
+
+.btn-github {
+  background-color: #444;
+  margin-bottom: 25px;
+}
+
+.btn-github:hover {
+  background-color: #191919;
+}
+
+.signup-link {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* ################ SignUp Link ##################### */
+
+hr {
+  border-top: 1px solid grey;
+}
+
+.signup-link a{
+  color: #1a75ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-link a:hover{
+  text-decoration: underline;
+}
+
+/* ################ Error Messages ##################### */
+
+.error-msg {
+  margin: 0;
+  margin-top: 9px;
+  padding: 0;
+  padding-left: 2px;
+  font-size: 1rem;
+  color: red;
+  line-height: 1.2;
+}
+
+.success-msg {
+  margin: 0;
+  margin-top: 9px;
+  padding: 0;
+  padding-left: 2px;
+  font-size: 1rem;
+  color: green;
+  line-height: 1.2;
 }
