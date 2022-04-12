@@ -108,7 +108,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:3000/auth/facebook/today",
+    callbackURL: "https://sleepy-anchorage-54722.herokuapp.com/auth/facebook/today",
   },
   function(accessToken, refreshToken, profile, cb) {
     var userLoggedIn;
