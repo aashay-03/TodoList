@@ -36,13 +36,16 @@ app.use(function(req, res, next) {
   next();
 });
 
-main().catch(function(err) {
-  console.log(err);
-})
+const mongo_database = process.env.MONGO_REMOTE;
 
-async function main() {
-  await mongoose.connect("mongodb://localhost:27017/todoListDB");
-}
+mongoose.connect(`${mongo_database}`,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    }
+  )
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
 
 const userSchema = new mongoose.Schema({
   email : String,
